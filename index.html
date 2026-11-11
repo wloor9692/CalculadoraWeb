@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Web</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="calculadora">
+    <h1>Calculadora</h1>
+    <h1>Grupo APP_Z</h1>
+
+    <!-- Pantalla: arriba la operación en curso, abajo el número actual -->
+    <div class="pantalla">
+      <div id="historial" class="historial"></div>
+      <div id="resultado" class="resultado">0</div>
+    </div>
+
+    <!-- Teclado: cada botón tiene data-tipo (qué clase de botón es) y data-valor (qué envía) -->
+    <div class="teclado">
+      <button class="tecla borrar" data-tipo="limpiar">C</button>
+      <button class="tecla borrar" data-tipo="retroceso">⌫</button>
+      <button class="tecla funcion" data-tipo="porcentaje">%</button>
+      <button class="tecla operador" data-tipo="operador" data-valor="/">÷</button>
+
+      <button class="tecla" data-tipo="numero" data-valor="7">7</button>
+      <button class="tecla" data-tipo="numero" data-valor="8">8</button>
+      <button class="tecla" data-tipo="numero" data-valor="9">9</button>
+      <button class="tecla operador" data-tipo="operador" data-valor="*">×</button>
+
+      <button class="tecla" data-tipo="numero" data-valor="4">4</button>
+      <button class="tecla" data-tipo="numero" data-valor="5">5</button>
+      <button class="tecla" data-tipo="numero" data-valor="6">6</button>
+      <button class="tecla operador" data-tipo="operador" data-valor="-">−</button>
+
+      <button class="tecla" data-tipo="numero" data-valor="1">1</button>
+      <button class="tecla" data-tipo="numero" data-valor="2">2</button>
+      <button class="tecla" data-tipo="numero" data-valor="3">3</button>
+      <button class="tecla operador" data-tipo="operador" data-valor="+">+</button>
+
+      <button class="tecla funcion" data-tipo="signo">±</button>
+      <button class="tecla" data-tipo="numero" data-valor="0">0</button>
+      <button class="tecla" data-tipo="punto">.</button>
+      <button class="tecla igual" data-tipo="igual">=</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

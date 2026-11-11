@@ -1,0 +1,147 @@
+/* ===== Estilos generales ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --fondo: #0f172a;
+  --tarjeta: #1e293b;
+  --tecla: #334155;
+  --tecla-hover: #475569;
+  --texto: #f1f5f9;
+  --texto-suave: #94a3b8;
+  --operador: #f59e0b;
+  --operador-hover: #fbbf24;
+  --igual: #22c55e;
+  --igual-hover: #4ade80;
+  --borrar: #ef4444;
+  --borrar-hover: #f87171;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  padding: 16px;
+}
+
+/* ===== Contenedor de la calculadora ===== */
+.calculadora {
+  width: 100%;
+  max-width: 340px;
+  background: var(--tarjeta);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.calculadora h1 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--texto-suave);
+  margin-bottom: 12px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ===== Pantalla ===== */
+.pantalla {
+  background: var(--fondo);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  text-align: right;
+  min-height: 92px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.historial {
+  min-height: 30px;
+  font-size: 0.95rem;
+  color: var(--texto-suave);
+  word-wrap: break-word;
+  /* Sombreado suave: franja un poco más clara con sombra interior y sombra en el texto */
+  background: rgba(148, 163, 184, 0.08);
+  border-radius: 8px;
+  padding: 4px 10px;
+  margin-bottom: 6px;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.35);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.resultado {
+  font-size: 2.2rem;
+  font-weight: 600;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+/* ===== Teclado (cuadrícula de 4 columnas) ===== */
+.teclado {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.tecla {
+  border: none;
+  border-radius: 12px;
+  padding: 16px 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--texto);
+  background: var(--tecla);
+  cursor: pointer;
+  transition: background 0.15s, transform 0.05s;
+}
+
+.tecla:hover {
+  background: var(--tecla-hover);
+}
+
+.tecla:active {
+  transform: scale(0.95);
+}
+
+.tecla.operador {
+  background: var(--operador);
+  color: #1e1b0f;
+}
+.tecla.operador:hover {
+  background: var(--operador-hover);
+}
+
+.tecla.igual {
+  background: var(--igual);
+  color: #052e16;
+}
+.tecla.igual:hover {
+  background: var(--igual-hover);
+}
+
+.tecla.borrar {
+  background: var(--borrar);
+}
+.tecla.borrar:hover {
+  background: var(--borrar-hover);
+}
+
+/* ===== Adaptación a pantallas pequeñas ===== */
+@media (max-width: 360px) {
+  .resultado {
+    font-size: 1.8rem;
+  }
+  .tecla {
+    padding: 13px 0;
+  }
+}
