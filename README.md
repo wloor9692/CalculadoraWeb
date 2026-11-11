@@ -1,2 +1,7 @@
 # CalculadoraWeb
 Calculadora Web requerida en la actividad #3 
+Integrantes 
+* LOOR GARCIA WALTER ALEJANDRO
+* VARELA INTRIAGO MAX EPIFANIO
+* MUÑOZ MEZA LUIS FELIPE
+* BAUTISTA SOLORZANO ERICK RICARDO
